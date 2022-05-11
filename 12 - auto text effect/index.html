@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Muli:300,700&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: blanchedalmond;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Muli", sans-serif;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1 id="text">Hello...</h1>
+
+    <script>
+      const text = document.getElementById("text");
+      const typewriter = "2022년 5월 11일 오후 3시 50분 40초 ⏲️";
+      let index = 1;
+
+      setInterval(writeText, 100);
+
+      function writeText() {
+        text.innerText = typewriter.slice(0, index);
+
+        index++;
+
+        if (index > typewriter.length) {
+          index = 1;
+        }
+      }
+    </script>
+  </body>
+</html>
